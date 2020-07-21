@@ -1,13 +1,13 @@
-$container: 1530;
+$container: 1210px;
 $tablet: 991px;
 $tablet-small: 767px;
 $mobile: 575px;
 $mobile-small: 370px;
-$container-fluid: 1780;
+$container-fluid: 1920;
 .container {
-    max-width: #{$container + px};
+    max-width: $container;
     width: 100%;
-    padding: 0 15px;
+    padding: 0 20px;
     margin: 0 auto;
     box-sizing: border-box;
 }

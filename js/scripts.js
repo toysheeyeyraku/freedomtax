@@ -1,32 +1,8 @@
 $(document).ready(function () {
-    $('.slider').slick({
-        
-        arrows:false,
-        
-       
-        adaptiveHeight: true
-      });
-      $('.slider-arrow-left').click(function(){
-        $('.slider').slick('slickPrev');
-      })
-      
-      $('.slider-arrow-right').click(function(){
-        $('.slider').slick('slickNext');
-      })
-      $('.trust-slider').slick({
-        arrows:false,
-        adaptiveHeight: true
-      });
-      $('.trust-slider-arrow-left').click(function(){
-        $('.trust-slider').slick('slickPrev');
-      })
-      
-      $('.trust-slider-arrow-right').click(function(){
-        $('.trust-slider').slick('slickNext');
-      })
+    
   //menu burger
   $(".header__wr-burger").on("click", function () {
-      if ($(document).width() <= 991) {
+      if ($(document).width() <= 1163) {
           let bindMenu = menuClick.bind(this);
           bindMenu();
       }
@@ -42,48 +18,40 @@ $(document).ready(function () {
       }
   }
   //
-
-  //Start FAQ`s
-  $('.head_faq').on('click', function () {
-      if(!$(this).parent().hasClass('active')){
-          $('.body_faq').slideUp(300);
-          $('.main_faq').removeClass('active');
-          $(this).parent().addClass('active');
-          $(this).parent().find('.body_faq').slideDown(300);
-      }
-      else{
-          $(this).parent().removeClass('active');
-          $(this).parent().find('.body_faq').slideUp(300);
-      }
+  $('.dropdown-el').click(function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    $(this).toggleClass('expanded');
+    $('input[name=sortType]:checked', this).removeClass("arr");
+    $('#'+$(e.target).attr('for')).prop('checked',true);
+    $('input[name=sortType]:checked', this).addClass("arr");
+    //$('#'+$(e.target).attr('for')).addClass("gggg");
   });
-  //End FAQ`s
-
-  //Start Modal How Can We Help
-  $('a[href="#how_help"]').on('click', function (e) {
-      e.preventDefault();
-      let service = $(this).find('.special-list__title').html();
-      $('.modal').addClass('active');
-      $('.hidden_service').val(service);
+  $(document).click(function() {
+    $('.dropdown-el').removeClass('expanded');
   });
-
-  $('.close_icon').on('click', function () {
-      $('.modal').removeClass('active');
-  });
-
-  $(document).mouseup(function (e){
-      var div = $(".wr_modal");
-      if (!div.is(e.target)
-          && div.has(e.target).length === 0) {
-          $('.modal').removeClass('active');
-      }
-  });
-
-
-
-  //End Modal How Can We Help
+  
  
 
-
+  $(document).on('click','.js-videoPoster',function(e) {
+    //отменяем стандартное действие button
+    e.preventDefault();
+    var poster = $(this);
+    // ищем родителя ближайшего по классу
+    var wrapper = poster.closest('.js-videoWrapper');
+    videoPlay(wrapper);
+  });
+  
+  //вопроизводим видео, при этом скрывая постер
+  function videoPlay(wrapper) {
+    var iframe = wrapper.find('.js-videoIframe');
+    // Берем ссылку видео из data
+    var src = iframe.data('src');
+    // скрываем постер
+    wrapper.addClass('videoWrapperActive');
+    // подставляем в src параметр из data
+    iframe.attr('src',src);
+  }
 });
 /*
      _ _      _       _
