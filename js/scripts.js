@@ -52,6 +52,37 @@ $(document).ready(function () {
     // подставляем в src параметр из data
     iframe.attr('src',src);
   }
+  $('.slider').slick({
+    infinite: true,
+    prevArrow: $('.sl1-l'),
+    nextArrow: $('.sl1-r')
+  });
+  $('.slider2').slick({
+    infinite: true,
+    slidesToShow: 3,
+    prevArrow: $('.sl33'),
+    nextArrow: $('.sl22'),
+    responsive: [
+        {
+            breakpoint: 991, // tablet breakpoint
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1
+            }
+        },
+        {
+            breakpoint: 767, // tablet breakpoint
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        }
+    ]
+   
+  });
+  
+   
+  
 });
 /*
      _ _      _       _
