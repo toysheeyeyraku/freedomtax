@@ -53,13 +53,16 @@ img {
   display: block;
 }
 a {
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
+    display: flex ;
+    justify-content: center ;
+    align-items: center ;
 }
 button:hover {
     cursor: pointer;
 }
 button {
 	border: none;
+}
+body , html {
+	overflow-x: hidden;
 }
