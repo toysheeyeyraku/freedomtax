@@ -21,26 +21,27 @@
             <div class="container">
                 <div class="top-header">
                     <div class="top-header-email-time">
-                        <a href="#" class="top-header-email">
+                        <a href="mailto:info@freedomtaxfl.com" class="top-header-email">
                             <img src="img/email.svg">
                             <p class="top-header-email-text">info@freedomtaxfl.com</p>
                         </a>
-                        <a href="#" class="top-header-email">
+                        <a href="#" class="top-header-email ggg">
                             <img src="img/clock.svg">
                             <p class="top-header-time">9:00 AM - 5:00 PM  <span>Monday to Friday</span></p>
                         </a>
                     </div>
                     <div class="locali">
-                        <div class="wrapper">
-                            <span class="dropdown-el">
-                                <input type="radio" name="sortType" value="Relevance" checked="checked" id="sort-relevance"><label for="sort-relevance">English</label>
-                                <input type="radio" name="sortType" value="Popularity" id="sort-best"><label for="sort-best">French</label>
-                                <input type="radio" name="sortType" value="PriceIncreasing" id="sort-low"><label for="sort-low">UK</label>
-                                <input type="radio" name="sortType" value="PriceDecreasing" id="sort-high"><label for="sort-high">J</label>
-                                <input type="radio" name="sortType" value="ProductBrand" id="sort-brand"><label for="sort-brand">D</label>
-                                <input type="radio" name="sortType" value="ProductName" id="sort-name"><label for="sort-name">F</label>
-                              </span>
-                        </div>
+                        <div id="drop" class="dropdown">
+                            <img class="arr" src="img/grayarrow.svg" >
+                            <button onclick="myFunction()" class="dropbtn">English</button>
+                            <div id="myDropdown" class="dropdown-content">
+                              <a class="choose" >English</a>
+                              <a class="choose" >Spain</a>
+                              <a class="choose" >Ukrainian</a>
+                              <a class="choose" >Germanian</a>
+                              
+                            </div>
+                          </div>
                         <div class="silki">
                             <a href="#"><img src="img/a1.svg"></a>
                             <a href="#"><img src="img/a2.svg"></a>
@@ -70,9 +71,9 @@
                         <li><a href="#">BLOG</a></li>
                         <li><a href="#">CONTACT US</a></li>
                         <a href="#" class="header-greenSeach header-additional"><img src="img/greenSearch.svg" /></a>
-                        <a href="#" class="header-telefone">
-                        <img src="img/telefone.svg" >
-                        <p class="header-additional header-telefone-text">140-734-41012</p>
+                        <a href="tel:140-734-41012" class="header-telefone">
+                            <img src="img/telefone.svg" >
+                            <p class="header-additional header-telefone-text">140-734-41012</p>
                         </a>
                         <a href="#" class="header-additional header-button">GET A QUOTE</a>
                     </ul>
@@ -115,7 +116,7 @@
                             <p class="text">Authorized by <span>Federal Government</span></p>
                     </div>
                 </div>
-                <div class="block-1-form ">
+                <form class="block-1-form ">
                     <p class="h">Get Upto <span>$6000</span>
                         in 24 hours</p>
                     <div class="galkas">
@@ -139,9 +140,9 @@
                             <img src="img/b1.svg">
                         </div>
                     </div>
-                    <a href="#" class="i-want">Yes, I want Help</a>
-                    <p class="get">get $100 voucher</p>
-                </div>
+                    <button type="submit" class="i-want">Yes, I want Help</button>
+                    <a href="#" class="get">get $100 voucher</a>
+                </form>
             </div>
         </div>
     </section>
@@ -157,8 +158,8 @@
                         <img src="img/nagrada.svg">
                     </div>
                     <div>
-                        <p class="h">20 Years</p>
-                        <p class="h">of Experience</p>
+                        <p class="h">20 Years of Experience</p>
+                        
                         <p class="p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
                     </div>
                 </div>
@@ -167,8 +168,8 @@
                         <img src="img/b22.svg">
                     </div>
                     <div>
-                        <p class="h">One-Stop</p>
-                        <p class="h">-Shop</p>
+                        <p class="h">One-Stop-Shop</p>
+                       
                         <p class="p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
                     </div>
                 </div>
@@ -177,8 +178,8 @@
                         <img src="img/b23.svg">
                     </div>
                     <div>
-                        <p class="h">CPA and IRS</p>
-                        <p class="h">Enrolled Agents</p>
+                        <p class="h">CPA and IRS Enrolled Agents</p>
+                        
                         <p class="p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
                     </div>
                 </div>
@@ -401,7 +402,7 @@
                            
                            
                            <iframe class="videoIframe js-videoIframe" src="" frameborder="0" allowTransparency="true" allowfullscreen data-src="https://www.youtube.com/embed/G4cJ4wviwS8?autoplay=1&modestbranding=1&rel=0&hl=ru&showinfo=0&color=white"></iframe>
-                           <button class="videoPoster js-videoPoster"></button>
+                           <button type="submit" class="videoPoster js-videoPoster"></button>
                            
                         </div>
                     </div>
@@ -642,8 +643,8 @@
                         <p class="disc">Discount Vouchers</p>
                         <p class="txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tristique orci sit amet sapien tincidunt, eu lobortis massa feugiat. </p>
                         <div class="buttons">
-                            <a class="free">yes, i want discount</a>
-                            <a class="now">i don`t want discount</a>
+                            <a href="#" class="free">yes, i want discount</a>
+                            <a href="#" class="now">i don`t want discount</a>
                         </div>
                     </div>
                 </div>
@@ -660,7 +661,7 @@
                     <form class="input-block">
                     
                         <input placeholder="Enter your address">
-                        <button>SUBSCRIBE NOW</button>
+                        <button type="submit">SUBSCRIBE NOW</button>
                    
                 </form>
                 </div>
@@ -692,10 +693,10 @@
                         </div>
                         <div class="sss">
                             <a class="f" href="#">Get in touch</a>     
-                            <a class="ddd"><span>Phone:</span> 140-734-41012</a>
-                            <a class="ddd"><span>Email:</span> info@freedomtaxfl.com</a>
-                            <a class="ddd"><span>Address:</span> 1016 E Osceola Parkway, Kissimmee, 34744, Florida, United States</a>
-                            <p class="ddd"><span>Working hours:</span> Mon – Fr 9AM – 5PM</p>
+                            <a href="#" class="ddd"><span>Phone:</span> 140-734-41012</a>
+                            <a href="#" class="ddd"><span>Email:</span> info@freedomtaxfl.com</a>
+                            <a href="#" class="ddd"><span>Address:</span> 1016 E Osceola Parkway, Kissimmee, 34744, Florida, United States</a>
+                            <p  href="#"class="ddd"><span>Working hours:</span> Mon – Fr 9AM – 5PM</p>
                             <div class="silki">
                                 <a href="#"><img src="img/o1.svg"></a>
                                 <a href="#"><img src="img/o1.svg"></a>
@@ -713,7 +714,7 @@
                     <form class="input-block">
                     
                         <input placeholder="Enter your email">
-                        <button>SUBSCRIBE</button>
+                        <button type="submit">SUBSCRIBE</button>
                    
                     </form>
                     <p class="aft">© 2020 Freedomtax Accounting. All rights reserved.</p>

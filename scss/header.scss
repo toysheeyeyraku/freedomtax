@@ -1,7 +1,7 @@
 
 // Container with no padding for navbar
 a, p, label {
-  font-family: Arial;
+  font-family: Arial ,sans-serif;
 }
 @media screen and (min-width: 1680px) {
   .logo-shift {
@@ -86,10 +86,10 @@ main{
           width: 100%;
       }
       @media screen and (max-width: $tablet){
-        max-width: 125px;
+        max-width: 180px;
       }
       @media screen and (max-width: $mobile){
-        max-width: 100px;
+        max-width: 150px;
       }
       
   }
@@ -320,7 +320,7 @@ main{
 .header-greenSeach {
   border-radius: 50%;
   width: 20px;
-  height: 20px;
+  min-height: 20px;
   background-color: #009344;
   display: flex;
   justify-content: center;
@@ -360,10 +360,11 @@ main{
     margin-right: 10px;
   }
   .header-telefone-text {
-   
+   display: block !important;
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
+  color: #061622;
   }
 }
 .header-button {
@@ -386,6 +387,7 @@ margin-left: 16px;
 .top-header{
   display: flex;
   justify-content: space-between;
+  align-items: center;
   .locali{
     display: flex;
     align-items: center;
@@ -421,7 +423,7 @@ margin-left: 16px;
 .top-header-email-time{
   @media screen and (max-width: 991px){
     flex-direction: column;
-    align-items: unset;
+    align-items: flex-start;
  }
  
   >*{
@@ -440,17 +442,24 @@ margin-left: 16px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
- 
+  .ggg {
+     @media screen and (max-width: 575px){
+        display: none !important;
+        
+     }
+  }
   .top-header-email{
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    
     img {
       width: 12px;
       height: 12px;
       margin-right: 11px;
     }
     .top-header-time {
+     
       font-family: Arial;
   font-style: normal;
   font-weight: normal;
@@ -598,4 +607,82 @@ $timing:.3s;
           }
         }
       }
+}
+.dropbtn {
+  
+  font-family: Arial;
+font-style: normal;
+font-weight: normal;
+font-size: 12px;
+line-height: 120%;
+/* or 14px */
+background-color: unset;
+
+/* gray */
+
+color: #828282;
+  padding: 16px;
+  padding-right: 30px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  outline: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  
+  .arr {
+    
+    position: absolute;
+    
+    right: 10px;
+    top: 18px;
+    
+    width: 8px;
+    height : 8px;
+    transform: rotate(0deg);
+    transition: transform 0.6s;
+  }
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  
+  width: 100%;
+  overflow: auto;
+  
+  z-index: 1;
+}
+
+.dropdown-content a {
+  font-family: Arial;
+font-style: normal;
+font-weight: normal;
+font-size: 12px;
+line-height: 120%;
+/* or 14px */
+box-sizing: border-box;
+width: 100%;
+/* gray */
+padding: 12px;
+color: #828282;
+  display: block;
+  background-color: #fff;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.dropdown a:hover {}
+.show {display: block;}
+.rotate {
+  .arr {
+    transform: rotate(180deg);
+    transition: transform 0.6s;
+  }
 }
